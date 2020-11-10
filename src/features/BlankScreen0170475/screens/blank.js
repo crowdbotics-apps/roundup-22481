@@ -24,6 +24,7 @@ export default class Blank extends React.Component {
   }
 
   state = {
+    TextInput_26: "",
     TextInput_3: "",
     TextInput_5: "",
     TextInput_7: "",
@@ -35,6 +36,12 @@ export default class Blank extends React.Component {
 
   render = () => (
     <View>
+      <TextInput
+        placeholder="Recent transactions:"
+        style={styles.TextInput_26}
+        value={this.state.TextInput_26}
+        onChangeText={nextValue => this.setState({ TextInput_26: nextValue })}
+      />
       <TextInput
         placeholder="Target.                   22.18"
         value={this.state.TextInput_3}
@@ -83,7 +90,17 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 16
   },
+
   View_1: {},
+  TextInput_3: {},
+  TextInput_5: { color: "#dc1818", fontFamily: "Merriweather-Italic" },
+  TextInput_7: {},
+  TextInput_9: { fontFamily: "Merriweather-Italic" },
+  TextInput_11: {},
+  TextInput_18: { fontFamily: "Merriweather-Italic" },
+  TextInput_21: { fontSize: 8, fontFamily: "RobotoMono-Regular" },
+  View_1: {},
+  TextInput_26: { fontFamily: "Roboto-Regular" },
   TextInput_3: {},
   TextInput_5: { color: "#dc1818", fontFamily: "Merriweather-Italic" },
   TextInput_7: {},
