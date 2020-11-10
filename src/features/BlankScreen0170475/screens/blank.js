@@ -31,11 +31,12 @@ export default class Blank extends React.Component {
     TextInput_9: "",
     TextInput_11: "",
     TextInput_18: "",
+    TextInput_75: "",
     TextInput_21: ""
   }
 
   render = () => (
-    <View>
+    <View style={styles.View_1}>
       <TextInput
         placeholder="Recent transactions:"
         style={styles.TextInput_26}
@@ -76,7 +77,13 @@ export default class Blank extends React.Component {
         onChangeText={nextValue => this.setState({ TextInput_18: nextValue })}
       />
       <TextInput
-        placeholder="Total added towards loans with RoundUp: $1.95"
+        placeholder="Total with RoundUp                        46.00"
+        style={styles.TextInput_75}
+        value={this.state.TextInput_75}
+        onChangeText={nextValue => this.setState({ TextInput_75: nextValue })}
+      />
+      <TextInput
+        placeholder="Total added towards loan debt with RoundUp: $1.95"
         style={styles.TextInput_21}
         value={this.state.TextInput_21}
         onChangeText={nextValue => this.setState({ TextInput_21: nextValue })}
@@ -107,5 +114,15 @@ const styles = StyleSheet.create({
   TextInput_9: { fontFamily: "Merriweather-Italic" },
   TextInput_11: {},
   TextInput_18: { fontFamily: "Merriweather-Italic" },
-  TextInput_21: { fontSize: 8, fontFamily: "RobotoMono-Regular" }
+  TextInput_21: { fontSize: 8, fontFamily: "RobotoMono-Regular" },
+  View_1: { borderColor: "#c30909" },
+  TextInput_26: { fontFamily: "Roboto-Regular" },
+  TextInput_3: {},
+  TextInput_5: { color: "#dc1818", fontFamily: "Merriweather-Italic" },
+  TextInput_7: {},
+  TextInput_9: { fontFamily: "Merriweather-Italic" },
+  TextInput_11: {},
+  TextInput_18: { fontFamily: "Merriweather-Italic" },
+  TextInput_75: { fontSize: 10, fontFamily: "RobotoMono-Regular" },
+  TextInput_21: { fontSize: 10, fontFamily: "RobotoMono-Regular" }
 })
